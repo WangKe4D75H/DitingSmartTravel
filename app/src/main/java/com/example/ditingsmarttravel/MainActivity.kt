@@ -6,57 +6,37 @@ import androidx.fragment.app.Fragment
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import com.google.android.material.tabs.TabLayoutMediator
 
 class MainActivity : AppCompatActivity() {
+
     private lateinit var viewPager: ViewPager2
-    private lateinit var bottomNav: BottomNavigationView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        // 设置顶部状态栏
-        setSupportActionBar(findViewById(R.id.toolbar))
-        supportActionBar?.setDisplayShowTitleEnabled(false)
+        // 设置ViewPager2
+        viewPager = findViewById(R.id.viewpager)
+        val pagerAdapter = ScreenSlidePagerAdapter(this)
+        viewPager.adapter = pagerAdapter
 
-        // 初始化界面和底部菜单栏
-        viewPager = findViewById(R.id.view_pager)
-        bottomNav = findViewById(R.id.bottom_nav)
-        setupBottomNavigationBar()
-    }
-
-    private fun setupBottomNavigationBar() {
-        bottomNav.setOnNavigationItemSelectedListener { item ->
-            when (item.itemId) {
-                R.id.nav_schedule -> {
-                    viewPager.currentItem = 0
-                    true
-                }
-                R.id.nav_live -> {
-                    viewPager.currentItem = 1
-                    true
-                }
-                R.id.nav_me -> {
-                    viewPager.currentItem = 2
-                    true
-                }
-                else -> false
+        // 设置BottomNavigationView与ViewPager2联动
+        val bottomNavigationView: BottomNavigationView = findViewById(R.id.bottom_navigation)
+        bottomNavigationView.setOnItemSelectedListener { item ->
+            viewPager.currentItem = when (item.itemId) {
+                R.id.navigation_trip -> 0
+                R.id.navigation_live -> 1
+                R.id.navigation_me -> 2
+                else -> 0
             }
-        }
-    }
-
-    private inner class ScreenSlidePagerAdapter(activity: AppCompatActivity) : FragmentStateAdapter(activity) {
-        override fun getItemCount(): Int {
-            return 3
+            true
         }
 
-        override fun createFragment(position: Int): Fragment {
-            return when (position) {
-                0 -> ScheduleFragment()
-                1 -> LiveFragment()
-                else -> MeFragment()
+        // 监听ViewPager的滑动，以便在滑动页面时切换底部导航栏的选中状态
+        viewPager.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
+            override fun onPageSelected(position: Int) {
+                bottomNavigationView.menu.getItem(position).isChecked = true
             }
-        }
+        })
     }
 }

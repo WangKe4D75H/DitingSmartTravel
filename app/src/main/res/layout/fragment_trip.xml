@@ -6,6 +6,6 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="这是我的界面"
+        android:text="这是行程界面"
         android:layout_gravity="center" />
 </FrameLayout>
