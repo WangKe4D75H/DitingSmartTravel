@@ -8,6 +8,10 @@ import android.view.ViewGroup
 import android.widget.TextView
 import android.widget.Toast
 import com.google.android.material.floatingactionbutton.FloatingActionButton
+import java.text.SimpleDateFormat
+import java.util.Calendar
+import java.util.Date
+import java.util.Locale
 
 class TripFragment : Fragment() {
 
@@ -25,6 +29,27 @@ class TripFragment : Fragment() {
         val fabTrip = view.findViewById<FloatingActionButton>(R.id.fab_trip)
         fabTrip.setOnClickListener {
             Toast.makeText(activity, "你点击了新建按钮", Toast.LENGTH_SHORT).show()
+        }
+
+        val greetingTextView = view.findViewById<TextView>(R.id.text_greeting)
+        val currentTime = getCurrentTime()
+        val greeting = getGreeting(currentTime)
+        greetingTextView.text = greeting
+    }
+
+    private fun getCurrentTime(): Date {
+        return Calendar.getInstance().time
+    }
+
+    private fun getGreeting(currentTime: Date): String {
+        val format = SimpleDateFormat("HH:mm", Locale.getDefault())
+        val time = format.format(currentTime)
+        return when {
+            "05:00" <= time && time < "08:00" -> "早上好"
+            "08:01" <= time && time < "12:00" -> "上午好"
+            "12:01" <= time && time < "14:00" -> "中午好"
+            "14:01" <= time && time < "19:00" -> "下午好"
+            else -> "晚上好"
         }
     }
 }
