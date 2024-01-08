@@ -1,5 +1,6 @@
 package com.example.ditingsmarttravel
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -28,7 +29,12 @@ class TripFragment : Fragment() {
 
         val fabTrip = view.findViewById<FloatingActionButton>(R.id.fab_trip)
         fabTrip.setOnClickListener {
-            Toast.makeText(activity, "你点击了新建按钮", Toast.LENGTH_SHORT).show()
+            activity?.let {
+                // 创建用于启动CreateActivity的Intent
+                val intent = Intent(it, CreateActivity::class.java)
+                // 开始新的Activity
+                it.startActivity(intent)
+            }
         }
 
         val greetingTextView = view.findViewById<TextView>(R.id.text_greeting)
