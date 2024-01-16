@@ -29,11 +29,11 @@
             android:id="@+id/tabLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/ditingblue"
+            android:background="@color/ditingBlue"
             app:tabMode="fixed"
             app:tabGravity="fill"
             app:tabTextColor="@color/white"
-            app:tabIndicatorColor="@color/starblue"
+            app:tabIndicatorColor="@color/starBlue"
             app:tabIndicatorHeight="10dp"/>
     </com.google.android.material.appbar.AppBarLayout>
 

@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:minHeight="?attr/actionBarSize"
-        android:background="@color/ditingblue"
+        android:background="@color/ditingBlue"
         app:title="谛听智行"
         app:titleTextColor="@color/white" />
 
@@ -28,8 +28,9 @@
         android:id="@+id/bottom_navigation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/ditingblue"
-        app:itemIconTint="@color/white"
-        app:itemTextColor="@color/white"
+        android:background="@color/white"
+        app:itemActiveIndicatorStyle="@style/Theme.MaterialComponents"
+        app:itemIconTint="@drawable/bottom_selector"
+        app:itemTextColor="@drawable/bottom_selector"
         app:menu="@menu/bottom_navigation_menu" />
 </LinearLayout>
