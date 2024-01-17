@@ -16,7 +16,7 @@ class CreateActivity : AppCompatActivity() {
         setContentView(R.layout.activity_create)
 
         val toolbar: androidx.appcompat.widget.Toolbar = findViewById(R.id.toolbar)
-        toolbar.setNavigationIcon(R.drawable.ic_back_arrow_32)
+        toolbar.setNavigationIcon(R.drawable.icon_left_arrow)
         setSupportActionBar(toolbar)
         toolbar.setNavigationOnClickListener { onBackPressed() }
 

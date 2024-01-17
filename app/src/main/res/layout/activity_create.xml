@@ -23,7 +23,7 @@
             android:background="?attr/colorPrimary"
             app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
             app:title="新建"
-            app:navigationIcon="@drawable/ic_back_arrow_32" />
+            app:navigationIcon="@drawable/icon_left_arrow" />
 
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tabLayout"
