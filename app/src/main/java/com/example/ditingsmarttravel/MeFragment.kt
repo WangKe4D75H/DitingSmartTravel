@@ -9,6 +9,7 @@ import android.widget.ArrayAdapter
 import android.widget.ImageView
 import android.widget.ListView
 import android.widget.TextView
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 
 class MeFragment : Fragment() {
@@ -30,7 +31,6 @@ class MeFragment : Fragment() {
         val options = arrayOf("日间/夜间模式切换", "行程历史", "个人信息", "主题风格", "关于本应用")
         val leftIcons1 = arrayOf(R.drawable.icon_moon_black, R.drawable.icon_history_black,
             R.drawable.icon_user_black, R.drawable.icon_theme_black, R.drawable.icon_about_black)
-        //val leftIcons2 = arrayOf(R.drawable.icon_moon_black)
 
         // 创建一个填充了选项的ArrayAdapter
         val adapter = IconArrayAdapter(
@@ -68,11 +68,14 @@ class MeFragment : Fragment() {
 
             val tvOption = view.findViewById<TextView>(R.id.option_title)
             val imgIconLeft1 = view.findViewById<ImageView>(R.id.left_icon1)
-            //val imgIconLeft2 = view.findViewById<ImageView>(R.id.left_icon2)
+            val imgIconRight = view.findViewById<ImageView>(R.id.right_icon)
+            imgIconLeft1.setColorFilter(ContextCompat.getColor(context, R.color.ditingBlue),
+                android.graphics.PorterDuff.Mode.SRC_IN)
+            imgIconRight.setColorFilter(ContextCompat.getColor(context,R.color.ditingBlue),
+                android.graphics.PorterDuff.Mode.SRC_IN)
 
             tvOption.text = items[position]
             imgIconLeft1.setImageResource(leftIcons1[position])
-           // imgIconLeft2.setImageResource(leftIcons2[position])
 
             return view
         }
