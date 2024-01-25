@@ -3,7 +3,7 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="ditingBlue">#15559A</color>
-    <color name="colorPrimary">#15559A</color>
+    <color name="colorPrimary">#FFFFFFFF</color>
     <color name="colorPrimaryDark">#1661AB</color>
     <color name="colorAccent">#D81B60</color>
     <color name="starBlue">#93B5CF</color>

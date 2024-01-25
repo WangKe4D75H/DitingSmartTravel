@@ -1,6 +1,7 @@
 package com.example.ditingsmarttravel
 
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -46,7 +47,7 @@ class MeFragment : Fragment() {
 
         listView.setOnItemClickListener { parent, view, position, id ->
             when (position) {
-                0 -> { /* 日间/夜间模式切换处理 */ }
+                0 -> { startActivity(Intent(context, DayNightActivity::class.java))}
                 1 -> { /* 行程历史处理 */ }
                 2 -> { /* 个人信息处理 */ }
                 3 -> { /* 主题风格处理 */ }

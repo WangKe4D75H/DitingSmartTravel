@@ -20,20 +20,21 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
+            android:background="@color/white"
             app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
             app:title="新建"
+            app:titleTextColor="@color/ditingBlue"
             app:navigationIcon="@drawable/icon_left_arrow" />
 
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tabLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/ditingBlue"
+            android:background="@color/white"
             app:tabMode="fixed"
             app:tabGravity="fill"
-            app:tabTextColor="@color/white"
-            app:tabIndicatorColor="@color/starBlue"
+            app:tabTextColor="@color/ditingBlue"
+            app:tabIndicatorColor="@color/ditingBlue"
             app:tabIndicatorHeight="10dp"/>
     </com.google.android.material.appbar.AppBarLayout>
 

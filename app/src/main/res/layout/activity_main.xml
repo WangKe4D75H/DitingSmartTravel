@@ -13,9 +13,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:minHeight="?attr/actionBarSize"
-        android:background="@color/ditingBlue"
+        android:background="@color/white"
         app:title="谛听智行"
-        app:titleTextColor="@color/white" />
+        app:titleTextColor="@color/ditingBlue" />
 
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/viewpager"
