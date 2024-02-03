@@ -48,9 +48,9 @@ class MeFragment : Fragment() {
         listView.setOnItemClickListener { parent, view, position, id ->
             when (position) {
                 0 -> { startActivity(Intent(context, DayNightActivity::class.java))}
-                1 -> { /* 行程历史处理 */ }
+                1 -> { startActivity(Intent(context,HistoryActivity::class.java)) }
                 2 -> { /* 个人信息处理 */ }
-                3 -> { /* 主题风格处理 */ }
+                3 -> { startActivity(Intent(context,ThemeActivity::class.java)) }
                 4 -> { /* 关于本应用处理 */ }
             }
         }

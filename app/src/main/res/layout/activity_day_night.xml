@@ -4,13 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DayNightActivity">
+    tools:context=".DayNightActivity"
+    android:background="@color/white">
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
+            android:background="@color/white"
             app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
             app:title="日间/夜间模式切换"
             app:titleTextColor="@color/ditingBlue"
@@ -92,7 +93,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="15dp"
             android:layout_marginTop="7dp"
-            android:text="应用的日间模式和日间模式将跟随系统设置切换"
+            android:text="应用的显示模式将跟随系统设置切换"
             android:textColor="@color/gray"
             android:textSize="12dp"
             app:layout_constraintStart_toStartOf="parent"

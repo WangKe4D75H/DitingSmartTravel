@@ -3,10 +3,17 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="ditingBlue">#15559A</color>
-    <color name="colorPrimary">#FFFFFFFF</color>
+    <color name="colorPrimary">#15559A</color>
     <color name="colorPrimaryDark">#1661AB</color>
     <color name="colorAccent">#D81B60</color>
     <color name="starBlue">#93B5CF</color>
     <color name="gray">#74787A</color>
     <color name="liteGray">#B8B8B8</color>
+    <color name="rectangle1">#15559A</color> <!-- 谛听蓝 -->
+    <color name="rectangle2">#248067</color> <!-- 林海 -->
+    <color name="rectangle3">#61649F</color> <!-- 藤萝 -->
+    <color name="rectangle4">#DB5A6B</color> <!-- 海棠 -->
+    <color name="rectangle5">#F4A83A</color> <!-- 银杏 -->
+    <color name="rectangle6">#F97D1C</color> <!-- 丹霞 -->
+
 </resources>

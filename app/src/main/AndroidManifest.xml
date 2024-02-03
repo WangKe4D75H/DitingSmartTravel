@@ -13,6 +13,12 @@
         android:theme="@style/Theme.DitingSmartTravel"
         tools:targetApi="31">
         <activity
+            android:name=".ThemeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".HistoryActivity"
+            android:exported="false" />
+        <activity
             android:name=".DayNightActivity"
             android:exported="false"
             android:label="@string/title_activity_day_night"
